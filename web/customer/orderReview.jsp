@@ -91,6 +91,7 @@
 
                             boolean anyQuantitySelected = quantities.values().stream().anyMatch(qty -> qty > 0);
                             if (!anyQuantitySelected) {
+                                System.out.println("error not selected");
                                 request.getSession().setAttribute("customererror", "You have not selected any items.");
                                 response.sendRedirect("ItemListCustomerServlet");
                             }

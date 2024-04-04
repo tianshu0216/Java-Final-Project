@@ -45,7 +45,7 @@ public class CustomerPurchaseServlet extends HttpServlet {
         System.out.println("Using userId: " + userId);
         // Iterate over the request parameters to find those related to food quantities
         request.getParameterMap().forEach((key, values) -> {
-            if (key.startsWith("inventory_")) {
+            if (key.startsWith("quantity_")) {
                 try {
                     int itemId = Integer.parseInt(key.substring(9)); // Extract food ID
                     int quantity = Integer.parseInt(values[0]); // Extract quantity

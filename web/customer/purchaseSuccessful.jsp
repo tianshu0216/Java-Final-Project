@@ -13,8 +13,8 @@
         // If not authenticated, redirect to landing page
         response.sendRedirect("http://localhost:8080/FWRP");
     }
-    Map<String, BigDecimal> lineTotals = (Map<String, BigDecimal>) session.getAttribute("lineTotals");
-    BigDecimal totalPrice = (BigDecimal) session.getAttribute("totalPrice");
+    Map<String, Double> lineTotals = (Map<String, Double>) session.getAttribute("lineTotals");
+    double totalPrice = (Double) session.getAttribute("totalPrice");
     int totalQuantity = (Integer) session.getAttribute("totalQuantity");
 %>
 <%@page import="model.User"%>
