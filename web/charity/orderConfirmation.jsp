@@ -1,7 +1,7 @@
 <%-- 
     Document   : orderConfirmation
-    Created on : Mar 27, 2024, 11:37:33 PM
-    Author     : Qina&Kaiwen
+    Created on : April 3, 2024
+    Author     : Tianshu&Feiling
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -79,11 +79,11 @@
             </div>
             <div class="submit-area">
                 <form action="http://localhost:8080/FWRP/charity/ItemListServlet" method="get">
-                    <button type="submit">Buy More</button>
+                    <button type="submit">Claim More</button>
                 </form>
 
                 <form action="http://localhost:8080/FWRP/user/TransactionServlet" method="get">
-                    <button type="submit">View Transaction</button>
+                    <button type="submit">View Claim Record</button>
                 </form>
             </div>
         </div>

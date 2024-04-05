@@ -1,6 +1,6 @@
 <%-- 
     Document   : transaction.jsp
-    Created on : Mar 24, 2024, 12:27:22 PM
+    Created on : Mar 30
     Author     : User
 --%>
 <%-- Check if user information exists in the session --%>

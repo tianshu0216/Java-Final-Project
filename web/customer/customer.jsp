@@ -1,7 +1,7 @@
 <%-- 
     Document   : consumers
-    Created on : Mar 25, 2024, 11:27:28 PM
-    Author     : Qina&Kaiwen
+    Created on : April 1, 2024
+    Author     : Tianshu&Feiling
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.List" %>
@@ -60,7 +60,10 @@
                 </div>
                 <div class="submit-area">
                     <button type="submit">Purchase Selected Items</button>
+                    <br></br>
+                    <button type="button" onclick="history.back()">Go Back</button>
                 </div>
+               
             </form>
         </div>
         <jsp:include page="../footer.jsp" />
