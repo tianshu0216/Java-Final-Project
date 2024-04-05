@@ -30,7 +30,7 @@ public class FoodDAOImpl implements FoodDAO {
     @Override
     public boolean addItem(Food food) {
         try {
-            String query = "INSERT INTO food (name, inventory, price, expirationDate,demand, isDonation, isSurplus, retailer_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            String query = "INSERT INTO food (name, inventory, price, expirationDate,demand, isDonation,  retailer_id) VALUES (?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement preparedStatement = this.connection.prepareStatement(query);
             preparedStatement.setString(1, food.getName());
             preparedStatement.setInt(2, food.getInventory());
@@ -38,8 +38,8 @@ public class FoodDAOImpl implements FoodDAO {
             preparedStatement.setDate(4, new java.sql.Date(food.getExpirationDate().getTime()));
             preparedStatement.setInt(5, food.getDemand());
             preparedStatement.setBoolean(6, food.getIsDonation());
-            preparedStatement.setBoolean(7, food.getIsSurplus());
-            preparedStatement.setInt(8, food.getRetailerId());
+//            preparedStatement.setBoolean(7, food.getIsSurplus());
+            preparedStatement.setInt(7, food.getRetailerId());
             int rowsInserted = preparedStatement.executeUpdate();
             return rowsInserted > 0;
         } catch (SQLException e) {
@@ -68,7 +68,8 @@ public class FoodDAOImpl implements FoodDAO {
     public List<Food> getSurplusItems() {
         List<Food> items = new ArrayList<>();
         try {
-            String query = "SELECT * FROM food where isSurplus = true";
+//          String query = "SELECT * FROM food where isSurplus = true";
+            String query = "SELECT * FROM food where expirationDate <= DATE_ADD(CURRENT_DATE(), INTERVAL 7 DAY) OR inventory > 1.2 * Demand";
             Statement statement = this.connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
 
@@ -81,7 +82,7 @@ public class FoodDAOImpl implements FoodDAO {
                 food.setExpirationDate(resultSet.getDate("expirationDate"));
                 food.setDemand(resultSet.getInt("demand"));
                 food.setIsDonation(resultSet.getBoolean("isDonation"));
-                food.setIsSurplus(resultSet.getBoolean("isSurplus"));
+//                food.setIsSurplus(resultSet.getBoolean("isSurplus"));
                 items.add(food);
             }
         } catch (SQLException e) {
@@ -134,7 +135,7 @@ public class FoodDAOImpl implements FoodDAO {
                 food.setExpirationDate(resultSet.getDate("expirationDate"));
                 food.setDemand(resultSet.getInt("demand"));
                 food.setIsDonation(resultSet.getBoolean("isDonation"));
-                food.setIsSurplus(resultSet.getBoolean("isSurplus"));
+//                food.setIsSurplus(resultSet.getBoolean("isSurplus"));
             }
         } catch (SQLException e) {
             e.printStackTrace();

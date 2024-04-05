@@ -30,15 +30,14 @@ create table Food(
     expirationDate DATE,
     demand int NOT NULL,
     isDonation boolean NOT NULL,
-    isSurplus boolean NOT NULL,
     retailer_id int,
     FOREIGN KEY (retailer_id) REFERENCES user(id)
 );
 
-insert into food(name, inventory, price, expirationDate,demand, isDonation, isSurplus, retailer_id) value("cookie", 100, 2.5, '2024-10-30',50, false, false, 1);
-insert into food(name, inventory, price, expirationDate,demand, isDonation, isSurplus, retailer_id) value("potato", 500, 6.7, '2024-04-30',490, false, false, 1);
-insert into food(name, inventory, price, expirationDate,demand, isDonation, isSurplus, retailer_id) value("onion", 100, 3.25, '2024-4-10',50,false, true, 2);
-insert into food(name, inventory, price, expirationDate,demand, isDonation, isSurplus, retailer_id) value("ham", 300, 10.25,  '2024-03-20',200,true, true, 2);
+insert into food(name, inventory, price, expirationDate,demand, isDonation,  retailer_id) value("cookie", 100, 2.5, '2024-10-30',50, false,  1);
+insert into food(name, inventory, price, expirationDate,demand, isDonation,  retailer_id) value("potato", 500, 6.7, '2024-04-30',490, false,  1);
+insert into food(name, inventory, price, expirationDate,demand, isDonation,  retailer_id) value("onion", 100, 3.25, '2024-4-10',50,false,  2);
+insert into food(name, inventory, price, expirationDate,demand, isDonation,  retailer_id) value("ham", 300, 10.25,  '2024-03-20',200,true,  2);
 
 create table transaction(
     id INT primary key auto_increment,

@@ -16,14 +16,14 @@ public class Food {
     private Date expirationDate;
     private int demand;
     private Boolean isDonation;
-    private Boolean isSurplus;
+//    private Boolean isSurplus;
     private int retailerId;
 
     public Food() {
         // Default constructor
     }
 
-    public Food(int id, String name, int inventory, double price, Date expirationDate, int demand, Boolean isDonation, Boolean isSurplus, int retailerId) {
+    public Food(int id, String name, int inventory, double price, Date expirationDate, int demand, Boolean isDonation, int retailerId) {
         this.id = id;
         this.name = name;
         this.inventory = inventory;
@@ -31,7 +31,7 @@ public class Food {
         this.expirationDate = expirationDate;
         this.demand = demand;
         this.isDonation = isDonation;
-        this.isSurplus = isSurplus;
+//        this.isSurplus = isSurplus;
         this.retailerId = retailerId;
     }
 
@@ -63,9 +63,9 @@ public class Food {
         return isDonation;
     }
 
-    public Boolean getIsSurplus() {
-        return isSurplus;
-    }
+//    public Boolean getIsSurplus() {
+//        return isSurplus;
+//    }
 
     public int getRetailerId() {
         return retailerId;
@@ -99,9 +99,9 @@ public class Food {
         this.isDonation = isDonation;
     }
 
-    public void setIsSurplus(Boolean isSurplus) {
-        this.isSurplus = isSurplus;
-    }
+//    public void setIsSurplus(Boolean isSurplus) {
+//        this.isSurplus = isSurplus;
+//    }
 
     public void setRetailerId(int retailerId) {
         this.retailerId = retailerId;
