@@ -4,11 +4,6 @@
  */
 package Controller;
 
-/**
- *
- * @author Qina&Kaiwen
- */
-import dataaccesslayer.DBConnection;
 import dataaccesslayer.FoodDAOImpl;
 import java.io.IOException;
 import java.util.HashMap;
@@ -60,11 +55,13 @@ public class PurchaseServlet extends HttpServlet {
                     if (quantity > 0) {
                         quantities.put(food.getId(), quantity);
                         System.out.println("Item ID: " + food.getId() + ", Quantity: " + quantity);
+                        
                     }
                 }
             }
             //STEP 3： No food selected situation
             boolean anyQuantitySelected = quantities.values().stream().anyMatch(qty -> qty > 0);
+            System.out.println("anyQuantitySelected: " + anyQuantitySelected);
             if (!anyQuantitySelected) {
                 request.getSession().setAttribute("error", "You have not selected any items.");
                 response.sendRedirect("ItemListServlet");
@@ -82,7 +79,6 @@ public class PurchaseServlet extends HttpServlet {
                     allItemsAvailable = true;
                 }
             }
-
             //STEP 5 ： Update Inventory
             if (allItemsAvailable) {
                 quantities.forEach((itemId, quantity) -> {
@@ -91,7 +87,6 @@ public class PurchaseServlet extends HttpServlet {
 
                 });
                 purchaseSuccessful = true;
-
             } else {
                 purchaseSuccessful = false;
                 response.getWriter().write("Purchase failed, please have another try!");
