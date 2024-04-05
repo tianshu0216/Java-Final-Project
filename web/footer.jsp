@@ -11,10 +11,9 @@
             background-size: cover; 
             color: #333333; 
             text-align: center;
-            padding: 25px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 15px 0 20px;
+            position: relative;
+            width: 100%;                       
         }
         .footer-links {
             margin-top: 20px;

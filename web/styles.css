@@ -70,32 +70,6 @@ button:hover {
     overflow: hidden;
     padding: 10px 0;
 }
-.navbar .project_name {
-    display:inline-block;
-    font-size: 40px;
-    weight:900;
-    float:left;
-    color:white;
-    margin-left: 20px
-}
-
-
-
-
-.navbar a {
-    float: right;
-    display: block;
-    color: #fff;
-    line-height: 67px;
-    vertical-align: auto;
-    padding: 0 20px;
-
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    background-color: #0056b3;
-}
 
 .item-row {
     display: flex;

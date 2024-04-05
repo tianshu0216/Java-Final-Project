@@ -13,8 +13,8 @@
             align-items: center;
             background-color: #f6fff2; /* 背景颜色为浅绿色 */
             color: #333333; 
-            padding: 50px 10px; /* 增加上下内边距 */
-            margin: 25px 15px;
+            padding: 40px 10px; /* 增加上下内边距 */
+            margin: 0px 0px;
         }
         .content-left,
         .content-right {
@@ -39,13 +39,12 @@
             font-weight: 600; /* 字体粗细 */
             font-size: 16px; /* 字体大小增大 */
             width: 200px; /* 按钮宽度 */
-            height: 40px; /* 按钮高度 */
-            margin: 15px 10px; /* 按钮间距 */
+            height: 30px; /* 按钮高度 */
+            margin: 20px 15px; /* 按钮间距 */
             display: block; /* 将按钮转换为块级元素，使得换行生效 */
             text-align: center; /* 文字居中对齐 */
             text-decoration: none; /* 去除下划线 */
-            line-height: 40px; /* 设置行高，使文字垂直居中 */
-        }
+         }
         .menu-btn:hover {
             background-color: #2a8e48; /* 按钮鼠标悬停时背景颜色 */
         }
@@ -53,9 +52,10 @@
             color: #263a4f; 
             font-size: 32px; 
         }
-        h2{
+        .intro{
             color: #666666; 
             font-size: 24px; 
+            margin: 20px 15px;
         }
     </style>
 </head>
@@ -67,13 +67,13 @@
             <img src="food-2.png" alt="img"> 
         </div>
         <div class="content-center">
-            
-            <h2>The Food Waste Reduction Platform aims to address the global issue of food waste by providing a comprehensive solution that connects food retailers, consumers, and charitable organizations.
+          <div class="intro">  
+          The Food Waste Reduction Platform aims to address the global issue of food waste by providing a comprehensive solution that connects food retailers, consumers, and charitable organizations.
                     A food waste reduction platform plays a vital role in promoting sustainability, reducing hunger, and building more resilient food ecosystems. 
-                    It encourages collaboration among stakeholders across the food supply chain and encourages collective action to address one of the most important challenges of our time.</h2> 
-            
+                    It encourages collaboration among stakeholders across the food supply chain and encourages collective action to address one of the most important challenges of our time.
+            </div>
             <div class="menu-btn-container">
-                <a class="menu-btn btn-white" href="http://localhost:8080/FWRP/user/login.jsp">LOGIN</a>
+                <a class="menu-btn btn-white" href="http://localhost:8080/FWRP/user/login.jsp">LOGIN
                 <a class="menu-btn btn-white" href="http://localhost:8080/FWRP/user/registration.jsp">REGISTRATION</a>
             </div>
         </div>
