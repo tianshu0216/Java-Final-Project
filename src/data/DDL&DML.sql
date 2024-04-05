@@ -50,7 +50,16 @@ create table transaction(
     FOREIGN KEY (purchaser_id) REFERENCES user(id)
 );
 
-
+CREATE TABLE messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    userId INT,
+    message TEXT,
+    postedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status ENUM('OPEN', 'CLAIMED') DEFAULT 'OPEN',
+    claimedBy INT DEFAULT NULL,
+    FOREIGN KEY (userId) REFERENCES user(id),
+    FOREIGN KEY (claimedBy) REFERENCES user(id)
+);
 insert into transaction(food_id, quantity, purchaser_id) value(1, 50, 2);
 insert into transaction(food_id, quantity, purchaser_id) value(2, 20, 2);
 insert into transaction(food_id, quantity, purchaser_id) value(3, 30, 3);

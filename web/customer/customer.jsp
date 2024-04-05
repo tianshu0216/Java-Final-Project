@@ -60,7 +60,10 @@
                 </div>
                 <div class="submit-area">
                     <button type="submit">Purchase Selected Items</button>
+                    <br></br>
+                    <button type="button" onclick="history.back()">Go Back</button>
                 </div>
+               
             </form>
         </div>
         <jsp:include page="../footer.jsp" />
