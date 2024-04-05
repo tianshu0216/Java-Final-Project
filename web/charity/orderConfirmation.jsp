@@ -1,7 +1,7 @@
 <%-- 
     Document   : orderConfirmation
-    Created on : Mar 27, 2024, 11:37:33 PM
-    Author     : Qina&Kaiwen
+    Created on : April 3, 2024
+    Author     : Tianshu&Feiling
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
