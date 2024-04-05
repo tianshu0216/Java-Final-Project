@@ -97,4 +97,39 @@
         <servlet-name>CustomerPurchaseServlet</servlet-name>
         <url-pattern>/customer/CustomerPurchaseServlet</url-pattern>
     </servlet-mapping>
+    <!--inventory--> 
+    <servlet>
+        <servlet-name>AddItemServlet</servlet-name>
+        <servlet-class>Controller.AddItemServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddItemServlet</servlet-name>
+        <url-pattern>/inventory/AddItemServlet</url-pattern>
+    </servlet-mapping>
+        <servlet>
+        <servlet-name>UpdateFoodServlet</servlet-name>
+        <servlet-class>Controller.UpdateFoodServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateFoodServlet</servlet-name>
+        <url-pattern>/inventory/UpdateFoodServlet</url-pattern>
+    </servlet-mapping>
+    <!--messages--> 
+    <servlet>
+        <servlet-name>PostMessageServlet</servlet-name>
+        <servlet-class>Controller.PostMessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PostMessageServlet</servlet-name>
+        <url-pattern>/messages/PostMessageServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ClaimMessageServlet</servlet-name>
+        <servlet-class>Controller.ClaimMessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClaimMessageServlet</servlet-name>
+        <url-pattern>/messages/ClaimMessageServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -17,4 +17,6 @@ public interface FoodDAO {
 //    List<Food> getItems();
     List<Food> getSurplusItems();
     Food getItemById(int itemId);
+    List<Food> getFoodsByRetailerId(int userId);
+    boolean updateFood(Food food);
 }
