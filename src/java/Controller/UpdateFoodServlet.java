@@ -24,7 +24,7 @@ public class UpdateFoodServlet extends HttpServlet {
             boolean isDonation = request.getParameter("isDonation") != null;
             boolean isSurplus = request.getParameter("isSurplus") != null;
 
-            Food food = new Food(id, name, inventory, price, expirationDate, demand, isDonation, isSurplus, 0); // Assumed retailer_id is not being updated
+            Food food = new Food(id, name, inventory, price, expirationDate, demand, isDonation, 0); // Assumed retailer_id is not being updated
             FoodDAOImpl dao = new FoodDAOImpl();
             dao.updateFood(food); // Assume you have implemented this method
 

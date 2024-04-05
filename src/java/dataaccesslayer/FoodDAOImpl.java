@@ -65,7 +65,7 @@ public class FoodDAOImpl implements FoodDAO {
                 food.setExpirationDate(resultSet.getDate("expirationDate"));
                 food.setDemand(resultSet.getInt("demand"));
                 food.setIsDonation(resultSet.getBoolean("isDonation"));
-                food.setIsSurplus(resultSet.getBoolean("isSurplus"));
+//                food.setIsSurplus(resultSet.getBoolean("isSurplus"));
                 food.setRetailerId(resultSet.getInt("retailer_id"));
                 foods.add(food);
             }
@@ -122,7 +122,7 @@ public class FoodDAOImpl implements FoodDAO {
     @Override
     public boolean updateFood(Food food) {
     try {
-        String sql = "UPDATE Food SET name = ?, inventory = ?, price = ?, expirationDate = ?, demand = ?, isDonation = ?, isSurplus = ? WHERE id = ?";
+        String sql = "UPDATE Food SET name = ?, inventory = ?, price = ?, expirationDate = ?, demand = ?, isDonation = ? WHERE id = ?";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1, food.getName());
         statement.setInt(2, food.getInventory());
@@ -130,8 +130,8 @@ public class FoodDAOImpl implements FoodDAO {
         statement.setDate(4, new java.sql.Date(food.getExpirationDate().getTime()));
         statement.setInt(5, food.getDemand());
         statement.setBoolean(6, food.getIsDonation());
-        statement.setBoolean(7, food.getIsSurplus());
-        statement.setInt(8, food.getId());
+//        statement.setBoolean(7, food.getIsSurplus());
+        statement.setInt(7, food.getId());
 
         int rowsUpdated = statement.executeUpdate();
         return rowsUpdated > 0;

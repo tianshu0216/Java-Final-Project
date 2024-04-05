@@ -37,7 +37,7 @@ public class AddItemServlet extends HttpServlet {
         food.setDemand(demand);
         food.setExpirationDate(expirationDate);
         food.setIsDonation(isDonation);
-        food.setIsSurplus(isSurplus);
+//        food.setIsSurplus(isSurplus);
         food.setRetailerId(user.getId());
 
         FoodDAOImpl dao = new FoodDAOImpl();

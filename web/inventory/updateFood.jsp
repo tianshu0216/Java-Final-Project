@@ -34,8 +34,6 @@
         <input type="number" name="demand" value="<%= food.getDemand() %>" required><br>
         <label for="isDonation">Donation:</label>
         <input type="checkbox" name="isDonation" <%= food.getIsDonation() ? "checked" : "" %>><br>
-        <label for="isSurplus">Surplus:</label>
-        <input type="checkbox" name="isSurplus" <%= food.getIsSurplus() ? "checked" : "" %>><br>
         <input type="submit" value="Update">
     </form>
 </body>

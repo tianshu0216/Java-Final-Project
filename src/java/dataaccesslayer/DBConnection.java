@@ -46,7 +46,7 @@ public class DBConnection {
      */
     private void initConnection() {
         
-        try (InputStream in = new FileInputStream("/Users/ty_huang/NetBeansProjects/Java-Final-Project/src/data/database.properties")) 
+        try (InputStream in = new FileInputStream("C:\\javaFinal\\database.properties")) 
         {
             System.out.println(in);
             Properties dbConnectionProps = new Properties();

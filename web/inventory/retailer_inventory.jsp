@@ -29,7 +29,7 @@
                     <th>Expiration Date</th>
                     <th>Demand</th>
                     <th>Donation</th>
-                    <th>Surplus</th>
+                    <th>Modification</th>
                 </tr>
             </thead>
             <tbody>
@@ -47,7 +47,6 @@
                     <td><%= food.getExpirationDate().toString() %></td>
                     <td><%= food.getDemand() %></td>
                     <td><%= food.getIsDonation() ? "Yes" : "No" %></td>
-                    <td><%= food.getIsSurplus() ? "Yes" : "No" %></td>
                     <td>
                         <a href="updateFood.jsp?foodId=<%= food.getId() %>">Modify</a>
                     </td>

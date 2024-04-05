@@ -79,11 +79,11 @@
             </div>
             <div class="submit-area">
                 <form action="http://localhost:8080/FWRP/charity/ItemListServlet" method="get">
-                    <button type="submit">Buy More</button>
+                    <button type="submit">Claim More</button>
                 </form>
 
                 <form action="http://localhost:8080/FWRP/user/TransactionServlet" method="get">
-                    <button type="submit">View Transaction</button>
+                    <button type="submit">View Claim Record</button>
                 </form>
             </div>
         </div>

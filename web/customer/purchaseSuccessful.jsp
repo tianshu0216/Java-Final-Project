@@ -91,10 +91,10 @@
             </div>
             <div class="submit-area">
                 <form action="http://localhost:8080/FWRP/customer/ItemListCustomerServlet" method="get">
-                    <button type="submit">Claim More</button>
+                    <button type="submit">Purchase More</button>
                 </form>
                <form action="http://localhost:8080/FWRP/user/TransactionServlet" method="get">
-                    <button type="submit">View Transaction</button>
+                    <button type="submit">View Transaction Record</button>
                 </form>
             </div>
         </div>
