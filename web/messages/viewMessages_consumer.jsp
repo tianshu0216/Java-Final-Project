@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+    <jsp:include page="../header.jsp" />
     <%
         User user = (User) session.getAttribute("user");
         if (user == null) {
@@ -68,5 +69,6 @@
             </tbody>
         </table>
     </div>
+            <jsp:include page="../footer.jsp" />
 </body>
 </html>

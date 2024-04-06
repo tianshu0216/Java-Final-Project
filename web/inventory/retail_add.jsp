@@ -17,16 +17,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">Your Logo</div>
-        <nav>
-            <a href="../index.jsp">Home</a>
-            <a href="http://localhost:8080/FWRP/user/registration.jsp">Registration</a>   
-            <a href="http://localhost:8080/FWRP/user/login.jsp">Login</a>    
-        </nav>
-    </header>
-
-    <div class="container">
+    <jsp:include page="../header.jsp" />
+        <div class="container">
         <h1>Inventory Management</h1>
         <section id="inventorySection">
             <h2>Add New Item</h2>
@@ -45,7 +37,7 @@
                     <input type="text" id="itemName" name="itemName" required>
                 </div>
                 <div class="form-group">
-                    <label for="quantity">Quantity:</label>
+                    <label for="quantity">Inventory Quantity:</label>
                     <input type="number" id="quantity" name="quantity" required>
                 </div>
                 <div class="form-group">
@@ -53,7 +45,7 @@
                     <input type="text" id="price" name="price" required>
                 </div>
                 <div class="form-group">
-                    <label for="demand">Demand:</label>
+                    <label for="demand">Demand Quantity:</label>
                     <input type="number" id="demand" name="demand" required>
                 </div>
                 <div class="form-group">
@@ -63,12 +55,15 @@
                 <div class="form-group">
                     <label><input type="checkbox" name="isDonation"> Is Donation?</label>
                 </div>
-                <button type="submit">Add Item</button>
-                <div class="submit-area">
-                <button type="button" onclick="history.back()">Go Back</button>
-                </div>
+                
+               <div class="button-container">
+                <div class="dashboard_btn" type="submit">Add A new Item</div>                
+               <div class="dashboard_btn" type="button" onclick="history.back()">Go Back</div>
+                </div>    
+                
             </form>
         </section>
     </div>
+            <jsp:include page="../footer.jsp" />
 </body>
 </html>

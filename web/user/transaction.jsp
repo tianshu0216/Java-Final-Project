@@ -1,8 +1,4 @@
-<%-- 
-    Document   : transaction.jsp
-    Created on : Mar 30
-    Author     : User
---%>
+
 <%-- Check if user information exists in the session --%>
 <%@page import="model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -29,7 +25,7 @@
         <div class="container">
             <h1>Transactions</h1>
             <h3>Hi <%= user.getName()%>, Your role is: <%= user.getUserType()%> </h3>
-            <h3>Here's your transaction </h3>
+            <h3>Here's your transaction history:</h3>
 
 
             <table border="1">
@@ -65,10 +61,11 @@
                     <% }%>
                 </tbody>
             </table>
-        </div>
-        <div class="submit-area">
+             <div class="submit-area">
             <button type="button" onclick="history.back()">Go Back</button>
         </div>
+        </div>
+
         <jsp:include page="../footer.jsp" />
     </body>
 </html>

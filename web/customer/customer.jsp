@@ -59,7 +59,7 @@
                     %>
                 </div>
                 <div class="submit-area">
-                    <button type="submit">Purchase Selected Items</button>
+                    <button type="submit">Purchase </button>
                     <br></br>
                     <button type="button" onclick="history.back()">Go Back</button>
                 </div>
