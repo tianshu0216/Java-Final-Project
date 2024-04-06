@@ -64,6 +64,11 @@
             </form>
         </section>
     </div>
+        <script>
+        <% if(request.getAttribute("alertEmailMessage") != null) { %>
+        alert("<%= request.getAttribute("alertEmailMessage") %>");
+        <% } %>
+        </script>
             <jsp:include page="../footer.jsp" />
 </body>
 </html>

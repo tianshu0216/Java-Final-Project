@@ -18,8 +18,8 @@ INSERT INTO User (name, email, password, isSubscribe, userType, location)
 VALUES ('Liu', 'Liu@example.com', '123456',TRUE, 'retailer', 'British Columbia'),
        ('Harvey','Harvey@gmail.com','22222',TRUE,'retailer','Nova Scotia'),
        ('Xie', 'Xie@example.com', '123456', TRUE,'consumer', 'Ontario'),
-       ('Huang', 'Huang@example.com', '123456',FALSE, 'charitable organization', 'British Columbia'),
-       ('Julia', 'julia.jones@example.com', 'juliasPass123',FALSE, 'consumer', 'Quebec'),
+       ('Huang', 'Huang@example.com', '123456',TRUE, 'charitable organization', 'British Columbia'),
+       ('Julia', 'julia.jones@example.com', 'juliasPass123',TRUE, 'consumer', 'British Columbia'),
        ('Jack', 'jack.white@example.com', 'jacksPass123',FALSE, 'charitable organization', 'Ontario');
 
 create table Food(
