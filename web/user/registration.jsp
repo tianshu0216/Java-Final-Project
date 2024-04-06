@@ -1,8 +1,4 @@
-<%-- 
-    Document   : registration
-    Created on : Mar 30, 2024
-    Author     : User
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

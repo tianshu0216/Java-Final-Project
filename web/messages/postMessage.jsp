@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+     <jsp:include page="../header.jsp" />
     <% 
         User user = (User) session.getAttribute("user");
         if (user == null || !"consumer".equalsIgnoreCase(user.getUserType())) {
@@ -27,11 +28,15 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
             </div>
+            
             <div class="form-group">
+                
                 <input type="submit" value="Post Message">
+                
             </div>
         </form>
     </div>
+    <jsp:include page="../footer.jsp" />
 </body>
 </html>
 

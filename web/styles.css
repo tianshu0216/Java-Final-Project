@@ -51,13 +51,35 @@ textarea {
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4b7a4b;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+background-color: #4b7a4b; /* 按钮背景颜色 */
+color: #fff; /* 按钮字体颜色 */
+padding: 10px; /* 按钮内边距 */
+border-radius: 2px; /* 圆角 */
+text-transform: uppercase; /* 文字转换为大写 */
+font-weight: 600; /* 字体粗细 */
+font-size: 16px; /* 字体大小增大 */
+ width: 200px; /* 按钮宽度 */
+ height: 50px; /* 按钮高度 */
+ margin: 15px 10px; /* 按钮间距 */
+ cursor: pointer;
+ text-align: center; /* 文字居中对齐 */
+text-decoration: none; /* 去除下划线 */
+}
+
+submit {
+background-color: #4b7a4b; /* 按钮背景颜色 */
+color: #fff; /* 按钮字体颜色 */
+padding: 10px; /* 按钮内边距 */
+border-radius: 2px; /* 圆角 */
+text-transform: uppercase; /* 文字转换为大写 */
+font-weight: 600; /* 字体粗细 */
+font-size: 16px; /* 字体大小增大 */
+ width: 200px; /* 按钮宽度 */
+  height: 50px; /* 按钮高度 */
+ margin: 15px 10px; /* 按钮间距 */
+ cursor: pointer;
+ text-align: center; /* 文字居中对齐 */
+text-decoration: none; /* 去除下划线 */
 }
 
 button:hover {
@@ -118,11 +140,13 @@ button:hover {
     flex: 0 0 auto; /* Prevent it from growing */
     padding-right: 20px; /* Align with the input fields */
 }
-.submit-area {
-
-    padding: 10px;
-    margin-bottom: 100px;
-}
+ .submit-area {
+     display: flex;
+      justify-content: space-between;
+      padding: 35px;
+     margin-bottom: 100px;
+      margin-top: 30px;
+            }
 .order-details {
     text-align: center;
     margin-bottom: 20px;
@@ -152,7 +176,6 @@ table th {
     margin-top: 40px;
 }
 
-
 .dashboard_btn{
 background-color: #4b7a4b; /* 按钮背景颜色 */
 color: #fff; /* 按钮字体颜色 */
@@ -162,15 +185,19 @@ text-transform: uppercase; /* 文字转换为大写 */
 font-weight: 600; /* 字体粗细 */
 font-size: 16px; /* 字体大小增大 */
  width: 200px; /* 按钮宽度 */
-  height: 40px; /* 按钮高度 */
+  height: 50px; /* 按钮高度 */
  margin: 15px 10px; /* 按钮间距 */
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center; /* 文字居中对齐 */
+  border-radius: 5px;
+  text-align: center; /* 文字居中对齐 */
 text-decoration: none; /* 去除下划线 */
+ 
 
 }
-
+.button-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
 
 .dashboard_btn:hover {
     background-color:#2a8e48;

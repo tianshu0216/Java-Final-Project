@@ -28,7 +28,7 @@
             .submit-area {
                 display: flex;
                 justify-content: space-between;
-                padding: 50px;
+                padding: 35px;
                 margin-bottom: 100px;
                 margin-top: 30px;
             }
@@ -37,7 +37,8 @@
                 margin: 0 10px;
                 padding: 10px 20px;
                 font-size: 1em;
-                height: 40px;
+                width:300px;
+                height: 60px;
             }
 
             .submit-area button:first-child {

@@ -39,7 +39,7 @@
                 margin: 0 10px;
                 padding: 10px 20px;
                 font-size: 1em;
-                height: 40px;
+                height: 50px;
             }
 
             .submit-area button:first-child {
