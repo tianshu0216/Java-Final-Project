@@ -67,7 +67,6 @@
                         if (purchasedItems != null) {
                             for (Map.Entry<String, Integer> entry : purchasedItems.entrySet()) {
                     %>
-
                     <tr>
                         <td><%= entry.getKey()%></td>
                         <td><%= entry.getValue()%></td>
@@ -81,7 +80,6 @@
                 <form action="http://localhost:8080/FWRP/charity/ItemListServlet" method="get">
                     <button type="submit">Claim More</button>
                 </form>
-
                 <form action="http://localhost:8080/FWRP/user/TransactionServlet" method="get">
                     <button type="submit">View Claim Record</button>
                 </form>

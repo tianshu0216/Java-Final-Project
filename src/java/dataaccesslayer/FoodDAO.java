@@ -6,7 +6,7 @@ package dataaccesslayer;
 
 /**
  *
- * @author User
+ * @author Tianshu
  */
 import java.util.List;
 import model.Food;

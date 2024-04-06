@@ -28,7 +28,7 @@ public class AddItemServlet extends HttpServlet {
         int demand = Integer.parseInt(request.getParameter("demand"));
         Date expirationDate = Date.valueOf(request.getParameter("expirationDate"));
         boolean isDonation = request.getParameter("isDonation") != null;
-        boolean isSurplus = quantity > 1.5 * demand;
+      //  boolean isSurplus = quantity > 1.5 * demand;
 
         Food food = new Food();
         food.setName(itemName);

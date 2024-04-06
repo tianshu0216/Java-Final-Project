@@ -4,10 +4,6 @@
  */
 package Controller;
 
-/**
- *
- * @author Qina&Kaiwen
- */
 import dataaccesslayer.FoodDAOImpl;
 import java.io.IOException;
 import java.util.List;
@@ -22,6 +18,7 @@ import model.Food;
 
 public class ItemListCustomerServlet extends HttpServlet {
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("ItemListCustomerServlet doGet called");
         FoodDAOImpl foodDAO = new FoodDAOImpl();

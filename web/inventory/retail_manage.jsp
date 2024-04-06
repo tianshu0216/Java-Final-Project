@@ -17,14 +17,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">Your Logo</div>
-        <nav>
-            <a href="../index.jsp">Home</a>
-            <a href="http://localhost:8080/FWRP/user/registration.html">Registration</a>   
-            <a href="http://localhost:8080/FWRP/user/login.html">Login</a>    
-        </nav>
-    </header>
+  <jsp:include page="../header.jsp" />
 
     <div class="container">
         <h1>Inventory Management</h1>
@@ -42,7 +35,7 @@
                     boolean isDonation = request.getParameter("isDonation") != null;
                     
                     // Calculate isSurplus
-                    boolean isSurplus = quantity > 1.5 * demand;
+                    boolean isSurplus = quantity > 1.2 * demand;
 
                     Food food = new Food();
                     food.setName(itemName);
@@ -51,7 +44,7 @@
                     food.setDemand(demand);
                     food.setExpirationDate(expirationDate);
                     food.setIsDonation(isDonation);
-                    food.setIsSurplus(isSurplus);
+                 //   food.setIsSurplus(isSurplus);
                     food.setRetailerId(user.getId());
                     
                     FoodDAOImpl foodDao = new FoodDAOImpl();
@@ -84,11 +77,12 @@
                     <input type="date" id="expirationDate" name="expirationDate" required>
                 </div>
                 <div class="form-group">
-                    <label><input type="checkbox" name="isDonation"> Is Donation?</label>
+                    <label><input type="checkbox" name="isDonation"> Is this for Donation?</label>
                 </div>
                 <button type="submit">Add Item</button>
             </form>
         </section>
     </div>
+             <jsp:include page="../footer.jsp" />
 </body>
 </html>
