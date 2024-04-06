@@ -39,6 +39,7 @@ public class AddItemServlet extends HttpServlet {
         food.setIsDonation(isDonation);
 //        food.setIsSurplus(isSurplus);
         food.setRetailerId(user.getId());
+        System.out.println(user.getId());     
 
         FoodDAOImpl dao = new FoodDAOImpl();
         if (dao.addItem(food)) {

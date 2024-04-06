@@ -54,12 +54,12 @@
                 </div>
                 <div class="form-group">
                     <label><input type="checkbox" name="isDonation"> Is Donation?</label>
-                </div>
+                </div>               
+               
+                <button type="submit">Add A New Item</button>                   
                 
-               <div class="button-container">
-                <div class="dashboard_btn" type="submit">Add A new Item</div>                
-               <div class="dashboard_btn" type="button" onclick="history.back()">Go Back</div>
-                </div>    
+                <button type="button" onclick="history.back()">Go Back</button>
+                  
                 
             </form>
         </section>

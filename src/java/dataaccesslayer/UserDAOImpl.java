@@ -17,8 +17,7 @@ public class UserDAOImpl extends UserDAO {
     
     public UserDAOImpl() 
             
-    {
-        
+    {        
     	this.connection = DBConnection.getInstance().getConnection();
     }
 
@@ -50,12 +49,10 @@ public class UserDAOImpl extends UserDAO {
         } catch (SQLException e) {
         }
         return null;
-
     }
 
     @Override
-    public int createUser(User user) {
-        
+    public int createUser(User user) {        
         try {
             //prepare query
             PreparedStatement pstmt = this.connection.prepareStatement("INSERT INTO user (name, email, password, isSubscribe, userType, location) "
