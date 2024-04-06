@@ -23,21 +23,21 @@
             <p><strong>Email:</strong> <%= user.getEmail() %></p>
             <p><strong>Subscribed:</strong> <%= user.getIsSubscribe() ? "Yes" : "No" %></p>
             <p><strong>User Type:</strong> <%= user.getUserType() %></p>
-            <p><strong>Location:</strong> <%= user.getLocation() %></p>
+            <p><strong>Location:</strong> <%= user.getLocation() %></p><br><br><br>
         </div>
         <%-- Link Section --%>
         <div class="link-section">
             <% if (user.getUserType().equalsIgnoreCase("retailer")) { %>
-                <a class="dashboard_btn" href="http://localhost:8080/FWRP/inventory/AddItemServlet">Inventory Management</a>
-                <a class="dashboard_btn" href="http://localhost:8080/FWRP/inventory/retailer_inventory.jsp">See All Inventory</a>
+                <a class="dashboard_btn" href="http://localhost:8080/FWRP/inventory/AddItemServlet">Add New Item</a>
+                <a class="dashboard_btn" href="http://localhost:8080/FWRP/inventory/retailer_inventory.jsp">Inventory Management</a>
             <% } else if (user.getUserType().equalsIgnoreCase("consumer")) { %>
-                <a class="dashboard_btn" href="http://localhost:8080/FWRP/customer/ItemListCustomerServlet">Purchase Food</a>
-                <a class="dashboard_btn" href="http://localhost:8080/FWRP/user/TransactionServlet">View Transaction</a>
-                <a class="dashboard_btn" href="http://localhost:8080/FWRP/messages/postMessage.jsp">Post a Message</a>
+                <a class="customer_btn" href="http://localhost:8080/FWRP/customer/ItemListCustomerServlet">Purchase Food</a>
+                <a class="customer_btn" href="http://localhost:8080/FWRP/user/TransactionServlet">View Transaction History</a>
+                <a class="customer_btn" href="http://localhost:8080/FWRP/messages/postMessage.jsp">Post a Message</a>
             <% } else if (user.getUserType().equalsIgnoreCase("charitable organization")) { %>
-                <a class="dashboard_btn" href="http://localhost:8080/FWRP/charity/ItemListServlet">Claim Food</a>
-                <a class="dashboard_btn" href="http://localhost:8080/FWRP/user/TransactionServlet">View Claimed History</a>
-                <a class="dashboard_btn" href="http://localhost:8080/FWRP/messages/viewMessages.jsp">View Messages</a>
+                <a class="customer_btn" href="http://localhost:8080/FWRP/charity/ItemListServlet">Claim Food</a>
+                <a class="customer_btn" href="http://localhost:8080/FWRP/user/TransactionServlet">View Claimed History</a>
+                <a class="customer_btn" href="http://localhost:8080/FWRP/messages/viewMessages.jsp">View Messages</a>
             <% } %>
         </div>
     </div>

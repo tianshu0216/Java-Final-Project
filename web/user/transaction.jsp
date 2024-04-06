@@ -64,7 +64,6 @@
             <button type="button" onclick="history.back()">Go Back</button>
         </div>
         </div>
-
         <jsp:include page="../footer.jsp" />
     </body>
 </html>
