@@ -50,6 +50,7 @@ public class AddItemServlet extends HttpServlet {
         String location = user.getLocation();
         
         PreparedStatement pstmt = null;
+        
 
         //get user with or location
         try (Connection connection = DBConnection.getInstance().getConnection()){
@@ -57,16 +58,21 @@ public class AddItemServlet extends HttpServlet {
              pstmt = connection.prepareStatement("SELECT DISTINCT user.email FROM user WHERE userType = 'charitable organization'  AND isSubscribe = true AND location = ?");}else{
              pstmt = connection.prepareStatement("SELECT DISTINCT user.email FROM user WHERE userType = 'consumer'  AND isSubscribe = true AND location = ?");}
             pstmt.setString(1, location);
+            StringBuilder emailsSent = new StringBuilder();
             
             try (ResultSet rs = pstmt.executeQuery()) {
                 while (rs.next()) {
                     String receiverEmail = rs.getString("user.email");                       
                     System.out.println("Email sent successfully to " + receiverEmail);
                     System.out.println("New surplus food available");
+                    
+                    emailsSent.append(receiverEmail).append("\\n");
 
                 }
                 
             }
+            String message = "Email sent successfully to:\\n" + emailsSent.toString();
+            request.setAttribute("alertEmailMessage", message);
         } catch (Exception e) {
             e.printStackTrace();
             
@@ -74,7 +80,7 @@ public class AddItemServlet extends HttpServlet {
 
         FoodDAOImpl dao = new FoodDAOImpl();
         if (dao.addItem(food)) {
-            response.sendRedirect("retail_add.jsp?success=true");
+            request.getRequestDispatcher("retail_add.jsp").forward(request, response);
         } else {
             response.sendRedirect("retail_add.jsp?error=true");
         }

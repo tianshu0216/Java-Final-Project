@@ -42,8 +42,8 @@
                     <div class="item-row">
                         <span class="item-name"><%= item.getName() %></span>
                         <div class="quantity-area">
-                            <input type="number" class="item-quantity" id="quantity_<%= item.getId() %>" name="quantity_<%= item.getId() %>" value="0" min="0" max="<%= item.getInventory()- item.getDemand()*1.2 %>">
-                            <span class="availability">Available: <%= item.getInventory()- item.getDemand()*1.2 %></span>
+                            <input type="number" class="item-quantity" id="quantity_<%= item.getId() %>" name="quantity_<%= item.getId() %>" value="0" min="0" max="<%= item.getInventory()- (int)(item.getDemand()*1.2) %>">
+                            <span class="availability">Available: <%= item.getInventory()- (int)(item.getDemand()*1.2) %></span>
                         </div>
                     </div>
 
