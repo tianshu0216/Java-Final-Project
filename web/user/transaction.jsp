@@ -27,7 +27,6 @@
             <h3>Hi <%= user.getName()%>, Your role is: <%= user.getUserType()%> </h3>
             <h3>Here's your transaction history:</h3>
 
-
             <table border="1">
                 <thead>
                     <tr>

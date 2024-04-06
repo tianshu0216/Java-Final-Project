@@ -5,12 +5,8 @@
 package model;
 
 import java.sql.Timestamp;
-import java.util.Date;
 
-/**
- *
- * @author User
- */
+
 public class Transaction {
 
     private int orderId;

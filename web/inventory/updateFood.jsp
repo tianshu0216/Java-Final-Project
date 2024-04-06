@@ -20,6 +20,7 @@
     <title>Update Food Item</title>
 </head>
 <body>
+    <jsp:include page="../header.jsp" />
     <form action="UpdateFoodServlet" method="post">
         <input type="hidden" name="id" value="<%= foodId %>">
         <label for="name">Name:</label>
@@ -36,5 +37,6 @@
         <input type="checkbox" name="isDonation" <%= food.getIsDonation() ? "checked" : "" %>><br>
         <input type="submit" value="Update">
     </form>
+        <jsp:include page="../footer.jsp" />
 </body>
 </html>

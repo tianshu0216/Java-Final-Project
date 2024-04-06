@@ -6,7 +6,7 @@ package dataaccesslayer;
 
 /**
  *
- * @author User
+ * @author Tianshu Liu
  */
 import java.sql.*;
 import java.util.ArrayList;
@@ -24,7 +24,8 @@ public class FoodDAOImpl implements FoodDAO {
 
      /**
      *
-     * @param item
+     * @param food
+     * 
      * @return
      */
     @Override

@@ -9,7 +9,7 @@ import model.Transaction;
 
 /**
  *
- * @author User
+ * @author Tianshu Liu
  */
 public interface TransactionDAO {
     public List<Transaction> getTransactionsByPurchaserEmail(String email);

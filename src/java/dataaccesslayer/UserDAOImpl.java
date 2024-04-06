@@ -11,10 +11,6 @@ import java.sql.SQLException;
 
 import model.User;
 
-/**
- *
- * @author Jiaying Qiu
- */
 public class UserDAOImpl extends UserDAO {
     
     private Connection connection;
@@ -52,7 +48,6 @@ public class UserDAOImpl extends UserDAO {
                 );
             }
         } catch (SQLException e) {
-            e.printStackTrace();
         }
         return null;
 
@@ -75,7 +70,6 @@ public class UserDAOImpl extends UserDAO {
             int rowsAffected = pstmt.executeUpdate();
             return rowsAffected;
         } catch (SQLException e) {
-            e.printStackTrace();
             return 0;
         }
     }

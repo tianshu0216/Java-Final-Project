@@ -4,9 +4,8 @@
  */
 package dataaccesslayer;
 
-import java.sql.ResultSetMetaData;
+
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.Timestamp;
 import java.sql.SQLException;
 import java.util.List;
@@ -17,7 +16,7 @@ import model.Transaction;
 
 /**
  *
- * @author User
+ * @author Tianshu Liu
  */
 public class TransactionDAOImpl implements TransactionDAO {
     
@@ -70,7 +69,6 @@ public class TransactionDAOImpl implements TransactionDAO {
             return purchaserTransactions;
 
         } catch (SQLException e) {
-            e.printStackTrace();
             return null;
         }
     }

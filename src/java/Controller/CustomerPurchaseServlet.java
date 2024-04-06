@@ -4,17 +4,11 @@
  */
 package Controller;
 
-/**
- *
- * @author Qina&Kaiwen
- */
-import dataaccesslayer.DBConnection;
+
 import dataaccesslayer.FoodDAOImpl;
 import dataaccesslayer.TransactionDAOImpl;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -53,7 +47,6 @@ public class CustomerPurchaseServlet extends HttpServlet {
                         quantities.put(itemId, quantity);
                     }
                 } catch (NumberFormatException e) {
-                    e.printStackTrace();
                     System.err.println("Error parsing item ID or quantity");
                 }
             }

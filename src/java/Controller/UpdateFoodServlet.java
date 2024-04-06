@@ -22,15 +22,14 @@ public class UpdateFoodServlet extends HttpServlet {
             Date expirationDate = Date.valueOf(request.getParameter("expirationDate"));
             int demand = Integer.parseInt(request.getParameter("demand"));
             boolean isDonation = request.getParameter("isDonation") != null;
-            boolean isSurplus = request.getParameter("isSurplus") != null;
+           // boolean isSurplus = request.getParameter("isSurplus") != null;
 
             Food food = new Food(id, name, inventory, price, expirationDate, demand, isDonation, 0); // Assumed retailer_id is not being updated
             FoodDAOImpl dao = new FoodDAOImpl();
             dao.updateFood(food); // Assume you have implemented this method
 
             response.sendRedirect("retailer_inventory.jsp");
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (IOException | NumberFormatException e) {
             response.sendRedirect("retailer_inventory.jsp?error=true");
         }
     }

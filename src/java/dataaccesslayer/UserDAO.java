@@ -6,10 +6,7 @@ package dataaccesslayer;
 
 import model.User;
 
-/**
- *
- * @author User
- */
+
 public abstract class UserDAO {
     
     public abstract User getUserByEmail(String email);
