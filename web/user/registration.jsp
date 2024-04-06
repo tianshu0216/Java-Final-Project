@@ -59,6 +59,23 @@
                     <option value="charitable_organization">Charitable Organization</option>
                 </select>
             </div>
+            
+            <div class="form-group">
+                <label for="location">Location</label>
+                <select id="location" name="location" required>
+                    <option value="">Select Location</option>
+                    <option value="Alberta">Alberta</option>
+                    <option value="British Columbia">British Columbia</option>
+                    <option value="Manitoba">Manitoba</option>
+                    <option value="New Brunswick">New Brunswick</option>
+                    <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                    <option value="Nova Scotia">Nova Scotia</option>
+                    <option value="Ontario">Ontario</option>
+                    <option value="Prince Edward Island">Prince Edward Island</option>
+                    <option value="Quebec">Ontario</option>
+                    <option value="Saskatchewan">Saskatchewan</option>
+                </select>
+            </div>
            
             <div class="form-group">
             <label for="subscribed">Subscribed:</label>
@@ -68,7 +85,7 @@
             <button type="submit">Register</button>
         </form>
     </div>
-        <jsp:include page="../footer.jsp" />
+
     <!--<script src="registration_script.js"></script>-->
 </body>
 </html>

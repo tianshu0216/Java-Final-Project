@@ -65,9 +65,6 @@ insert into transaction(food_id, quantity, purchaser_id) value(2, 20, 2);
 insert into transaction(food_id, quantity, purchaser_id) value(3, 30, 3);
 insert into transaction(food_id, quantity, purchaser_id) value(4, 50, 3);
 
-select * from user;
-select * from food;
-select * from transaction;
 
 insert into transaction(order_id, food_id, quantity, purchaser_id,`transaction_time`) value(12345,1, 50, 2, now());
 insert into transaction(order_id,food_id, quantity, purchaser_id,`transaction_time`) value(12345,2, 20, 2, now());
