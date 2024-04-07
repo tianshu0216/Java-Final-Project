@@ -72,10 +72,7 @@
                     A food waste reduction platform plays a vital role in promoting sustainability, reducing hunger, and building more resilient food ecosystems. 
                     It encourages collaboration among stakeholders across the food supply chain and encourages collective action to address one of the most important challenges of our time.
             </div>
-            <div class="menu-btn-container">
-                <a class="menu-btn btn-white" href="http://localhost:8080/FWRP/user/login.jsp">LOGIN
-                <a class="menu-btn btn-white" href="http://localhost:8080/FWRP/user/registration.jsp">REGISTRATION</a>
-            </div>
+
         </div>
         <div class="content-right">
             <img src="food-1.png" alt="img"> 
