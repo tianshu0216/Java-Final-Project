@@ -16,7 +16,7 @@
     <% 
         User user = (User) session.getAttribute("user");
         if (user == null || !"consumer".equalsIgnoreCase(user.getUserType())) {
-            // 如果用户未登录或不是消费者类型，重定向到登录页面
+            
             response.sendRedirect("login.jsp");
             return;
         }

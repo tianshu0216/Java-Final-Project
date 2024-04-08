@@ -40,6 +40,6 @@
         </form>
     </div>
         <jsp:include page="../footer.jsp" />
-    <!--<script src="login_script.js"></script>-->
+    
 </body>
 </html>

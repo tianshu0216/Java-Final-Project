@@ -5,18 +5,14 @@
             index.jsp
         </welcome-file>
     </welcome-file-list>
-   
-    <!--login--> 
     <servlet>
         <servlet-name>LoginFormServlet</servlet-name>
         <servlet-class>Controller.LoginFormServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>LoginFormServlet</servlet-name>
         <url-pattern>/user/LoginFormServlet</url-pattern>
     </servlet-mapping>
-    <!--regiser-->
     <servlet>
         <servlet-name>RegistrationFormServlet</servlet-name>
         <servlet-class>Controller.RegistrationFormServlet</servlet-class>
@@ -26,9 +22,6 @@
         <servlet-name>RegistrationFormServlet</servlet-name>
         <url-pattern>/user/RegistrationFormServlet</url-pattern>
     </servlet-mapping>
-
-
-    <!--log out-->
     <servlet>
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>Controller.LogoutServlet</servlet-class>
@@ -39,9 +32,6 @@
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/user/LogoutServlet</url-pattern>
     </servlet-mapping>
-
-
-    <!--transactions--> 
     <servlet>
         <servlet-name>TransactionServlet</servlet-name>
         <servlet-class>Controller.TransactionServlet</servlet-class>
@@ -51,15 +41,31 @@
         <servlet-name>TransactionServlet</servlet-name>
         <url-pattern>/user/TransactionServlet</url-pattern>
     </servlet-mapping>
+<!--messages--> 
+    <servlet>
+        <servlet-name>PostMessageServlet</servlet-name>
+        <servlet-class>Controller.PostMessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PostMessageServlet</servlet-name>
+        <url-pattern>/messages/PostMessageServlet</url-pattern>
+    </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ClaimMessageServlet</servlet-name>
+        <servlet-class>Controller.ClaimMessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClaimMessageServlet</servlet-name>
+        <url-pattern>/messages/ClaimMessageServlet</url-pattern>
+    </servlet-mapping>
     
     <session-config>
         <session-timeout>
-            30
+            20
         </session-timeout>
     </session-config>
     
-    <!--Show Items1--> 
     <servlet>
         <servlet-name>ItemListServlet</servlet-name>
         <servlet-class>Controller.ItemListServlet</servlet-class>
@@ -69,7 +75,6 @@
         <url-pattern>/charity/ItemListServlet</url-pattern>
     </servlet-mapping>
 
-    <!--Show Items2--> 
     <servlet>
         <servlet-name>ItemListCustomerServlet</servlet-name>
         <servlet-class>Controller.ItemListCustomerServlet</servlet-class>
@@ -78,7 +83,6 @@
         <servlet-name>ItemListCustomerServlet</servlet-name>
         <url-pattern>/customer/ItemListCustomerServlet</url-pattern>
     </servlet-mapping>
-    <!--Buy Items1--> 
     <servlet>
         <servlet-name>PurchaseServlet</servlet-name>
         <servlet-class>Controller.PurchaseServlet</servlet-class>
@@ -87,8 +91,6 @@
         <servlet-name>PurchaseServlet</servlet-name>
         <url-pattern>/charity/PurchaseServlet</url-pattern>
     </servlet-mapping>
-    
-    <!--Buy Items2--> 
     <servlet>
         <servlet-name>CustomerPurchaseServlet</servlet-name>
         <servlet-class>Controller.CustomerPurchaseServlet</servlet-class>
@@ -114,22 +116,5 @@
         <servlet-name>UpdateFoodServlet</servlet-name>
         <url-pattern>/inventory/UpdateFoodServlet</url-pattern>
     </servlet-mapping>
-    <!--messages--> 
-    <servlet>
-        <servlet-name>PostMessageServlet</servlet-name>
-        <servlet-class>Controller.PostMessageServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>PostMessageServlet</servlet-name>
-        <url-pattern>/messages/PostMessageServlet</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>ClaimMessageServlet</servlet-name>
-        <servlet-class>Controller.ClaimMessageServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ClaimMessageServlet</servlet-name>
-        <url-pattern>/messages/ClaimMessageServlet</url-pattern>
-    </servlet-mapping>
+    
 </web-app>

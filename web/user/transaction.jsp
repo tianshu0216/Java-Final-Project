@@ -1,5 +1,3 @@
-
-<%-- Check if user information exists in the session --%>
 <%@page import="model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%

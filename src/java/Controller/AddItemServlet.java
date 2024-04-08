@@ -18,6 +18,16 @@ import java.sql.ResultSet;
 
 
 public class AddItemServlet extends HttpServlet {
+    /**
+     * Processes the HTTP POST request to add a new food item.
+     * Validates user session, extracts food item details from the request, and invokes DAO to add the item.
+     * Notifies subscribed users in the same location about the new item if it is a donation.
+     *
+     * @param request  The servlet request object containing the client's request.
+     * @param response The servlet response object containing the response the servlet sends to the client.
+     * @throws ServletException if a servlet-specific error occurs.
+     * @throws IOException if an I/O error occurs.
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User user = (User) request.getSession().getAttribute("user");
@@ -86,6 +96,15 @@ public class AddItemServlet extends HttpServlet {
         }
 
     }
+    /**
+     * Redirects GET requests to the item addition form.
+     * This is a convenience method to ensure users can navigate to the form via GET requests.
+     *
+     * @param request  The servlet request object containing the client's request.
+     * @param response The servlet response object containing the response the servlet sends to the client.
+     * @throws ServletException if a servlet-specific error occurs.
+     * @throws IOException if an I/O error occurs.
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     

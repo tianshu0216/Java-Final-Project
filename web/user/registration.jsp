@@ -15,7 +15,7 @@
     <div class="container">
         <h2>Registration</h2>
                  <%
-        // Check if there is an error parameter in the URL
+       
         String error = request.getParameter("error");
         if (error != null && error.equals("fail")) {
     %>
@@ -86,6 +86,6 @@
         </form>
     </div>
 
-    <!--<script src="registration_script.js"></script>-->
+    
 </body>
 </html>
