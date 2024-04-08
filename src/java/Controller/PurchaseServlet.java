@@ -24,9 +24,8 @@ public class PurchaseServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("PurchaseServlet doPost called");
+        
         FoodDAO foodDAO = new FoodDAOImpl();
-        // STEP 1: Fetch the list of all foods Store food ID and quantity
         List<Food> foods = foodDAO.getSurplusItems();
         Map<Integer, Integer> quantities = new HashMap<>();
 
@@ -35,8 +34,7 @@ public class PurchaseServlet extends HttpServlet {
 
         User user = (User) request.getSession().getAttribute("user");
         if (user == null) {
-            // Handle the case where the user is not logged in (e.g., redirect to login page)
-            response.sendRedirect("login.jsp"); // or wherever your login page is
+            response.sendRedirect("login.jsp");
             return;
         }
         int userId = user.getId();
@@ -45,7 +43,7 @@ public class PurchaseServlet extends HttpServlet {
         
         try {
 
-            //STEP 2： Extract food quantities from request.
+            
             for (Food food : foods) {
                 String quantityParam = "quantity_" + food.getId();
                 String quantityString = request.getParameter(quantityParam);
@@ -59,14 +57,14 @@ public class PurchaseServlet extends HttpServlet {
                     }
                 }
             }
-            //STEP 3： No food selected situation
+            
             boolean anyQuantitySelected = quantities.values().stream().anyMatch(qty -> qty > 0);
             System.out.println("anyQuantitySelected: " + anyQuantitySelected);
             if (!anyQuantitySelected) {
                 request.getSession().setAttribute("error", "You have not selected any items.");
                 response.sendRedirect("ItemListServlet");
             }
-            //STEP 4 ： Check each food's availability
+          
             for (Map.Entry<Integer, Integer> entry : quantities.entrySet()) {
                 int itemId = entry.getKey();
                 int requestedQuantity = entry.getValue();
@@ -89,7 +87,7 @@ public class PurchaseServlet extends HttpServlet {
                 purchaseSuccessful = true;
             } else {
                 purchaseSuccessful = false;
-                response.getWriter().write("Purchase failed, please have another try!");
+                response.getWriter().write("Purchase failed, Do another one!");
 
             }
             if (purchaseSuccessful) {
@@ -103,7 +101,7 @@ public class PurchaseServlet extends HttpServlet {
                     if (item != null) {
                         purchasedItemsInfo.put(item.getName(), entry.getValue());
 
-                        // Create a new transaction object for each food
+                       
                         Transaction transaction = new Transaction();
                         transaction.setOrderId(confirmationNumber);
                         transaction.setQuantity(entry.getValue());
@@ -115,7 +113,7 @@ public class PurchaseServlet extends HttpServlet {
                     }
                 }
 
-                // Store purchase summary in the session
+               
                 request.getSession().setAttribute("confirmationNumber", Integer.toString(confirmationNumber));
                 request.getSession().setAttribute("purchasedItems", purchasedItemsInfo);
                 request.getSession().setAttribute("charityordertime", new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date()));
