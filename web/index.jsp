@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Waste Reduction Platform - Registration</title>
     <style>
-        /* CSS for Content */
         .content {
             display: flex;
             justify-content: space-between; /* 水平空间均匀分配 */
@@ -68,9 +67,8 @@
         </div>
         <div class="content-center">
           <div class="intro">  
-          The Food Waste Reduction Platform aims to address the global issue of food waste by providing a comprehensive solution that connects food retailers, consumers, and charitable organizations.
-                    A food waste reduction platform plays a vital role in promoting sustainability, reducing hunger, and building more resilient food ecosystems. 
-                    It encourages collaboration among stakeholders across the food supply chain and encourages collective action to address one of the most important challenges of our time.
+          The Food Waste Reduction Platform is designed to tackle the worldwide problem of food wastage by offering an all-encompassing approach that brings together food retailers, consumers, and charities. This platform is crucial for enhancing sustainability, diminishing hunger, and fortifying the resilience of food systems. By fostering cooperation among various participants in the food supply chain, it drives concerted efforts to confront a significant contemporary challenge.
+
             </div>
 
         </div>
